@@ -1,8 +1,4 @@
 # Pacifica Dispatcher Example
-[![Build Status](https://travis-ci.org/pacifica/pacifica-dispatcher-example.svg?branch=master)](https://travis-ci.org/pacifica/pacifica-dispatcher-example)
-[![Build status](https://ci.appveyor.com/api/projects/status/eg2r1y37yvxi0b5p?svg=true)](https://ci.appveyor.com/project/dmlb2000/pacifica-example)
-[![Maintainability](https://api.codeclimate.com/v1/badges/f2dba248b1a7966e5a49/maintainability)](https://codeclimate.com/github/pacifica/pacifica-dispatcher-example/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/f2dba248b1a7966e5a49/test_coverage)](https://codeclimate.com/github/pacifica/pacifica-dispatcher-example/test_coverage)
 
 This package provides an example implementation of a [Pacifica Dispatcher](https://github.com/pacifica/pacifica-dispatcher).
 
