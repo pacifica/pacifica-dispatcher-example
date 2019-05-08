@@ -1,0 +1,40 @@
+version: '3.3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.uwsgi
+    links:
+    - rabbit
+    - mysql
+    ports:
+    - 8069:8069
+    environment:
+      BROKER_URL: pyamqp://guest:guest@rabbit:5672/
+      DATABASE_URL: mysql://example:example@127.0.0.1:3306/pacifica_dispatcher_example
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.celery
+    links:
+     - rabbit
+     - mysql
+    environment:
+      BROKER_URL: pyamqp://guest:guest@rabbit:5672/
+      DATABASE_URL: mysql://example:example@127.0.0.1:3306/pacifica_dispatcher_example
+
+  mysql:
+    image: mysql:5
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pacifica_dispatcher_example
+      MYSQL_USER: example
+      MYSQL_PASSWORD: example
+    ports:
+     - 3306:3306
+
+  rabbit:
+    image: rabbitmq
+    ports:
+     - 5672:5672
