@@ -6,3 +6,5 @@ pre-commit
 pylint
 pytest
 setuptools
+recommonmark
+sphinx_rtd_theme
