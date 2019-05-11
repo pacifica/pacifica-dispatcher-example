@@ -1,0 +1,23 @@
+$[?(
+  $["data"][*][?(
+    @["destinationTable"] = "TransactionKeyValue"
+      and
+    @["key"] = "example-key"
+      and
+    @["value"] = "example-value"
+  )]
+    and
+  $["data"][*][?(
+    @["destinationTable"] = "Files"
+      and
+    @["mimetype"] = "text/plain"
+      and
+    @["subdir"] = ""
+  )]
+    and
+  $["eventID"]
+    and
+  $["eventType"] = "org.pacifica.metadata.ingest"
+    and
+  $["source"] = "/pacifica/metadata/ingest"
+)]

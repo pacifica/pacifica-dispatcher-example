@@ -1,0 +1,8 @@
+-r requirements.txt
+coverage
+mock
+pep257
+pre-commit
+pylint
+pytest
+setuptools
